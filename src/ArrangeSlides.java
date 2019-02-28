@@ -46,6 +46,8 @@ public class ArrangeSlides {
                         goodJ = j;
                     }
                 }
+                if(goodJ == this.slides.size())
+                    goodJ--;
                 newArrangement.add(slides.get(goodJ));
                 slides.remove(goodJ);
                 goodI++;
@@ -54,7 +56,7 @@ public class ArrangeSlides {
     }
 
     public void writeToFile() throws IOException {
-        final String FILENAME = "submission.txt";
+        final String FILENAME = "E:/hashcode/hashcode/b.txt";
         FileWriter file = new FileWriter(FILENAME);
         BufferedWriter buf = new BufferedWriter(file);
         ourSOLUTION = new String();

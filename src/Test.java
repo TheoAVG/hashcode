@@ -4,7 +4,7 @@ class Test
 {
     public static void main(String[] args) throws IOException
     {
-        Reader reader = new Reader("/home/theoavg/Desktop/Programming/hashcode/src/landscapes.txt");
+        Reader reader = new Reader("E:/hashcode/hashcode/b_lovely_landscapes.txt");
         List<Picture> pics = reader.read();
         int i = 0;
         for(Picture pic : pics)
@@ -12,5 +12,9 @@ class Test
             i++;
         }
         System.out.println("Num counted:"+i);
+        Presentation pres = new Presentation(pics);
+        ArrangeSlides arranged = new ArrangeSlides(pres.arr);
+        arranged.compSlides();
+        arranged.writeToFile();
     }
 }

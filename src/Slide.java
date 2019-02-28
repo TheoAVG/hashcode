@@ -24,7 +24,7 @@ public class Slide {
         for(String i: V2.tags){
             hash.add(i);
         }
-        this.tags=(String[])hash.toArray();
+        this.tags=hash.toArray(new String[0]);
         this.len=this.tags.length;
     }
 
