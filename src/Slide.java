@@ -5,6 +5,6 @@ public class Slide {
 
     }
     public Slide(Picture V1, Picture V2) {
-        
+
     }
 }
