@@ -8,6 +8,6 @@ public class Picture
         String[] p = data.split(" ");
         this.type = p[0].charAt(0);
         this.len = Integer.parseInt(p[1]);
-        this.tags = p[2];
+        this.tags = p[2].split(", ");
     }
 }

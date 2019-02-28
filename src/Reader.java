@@ -10,15 +10,17 @@ class Reader
     FileReader reader;
     Scanner scan;
     List<Picture> data;
+    int len;
     public Reader(String filename) throws IOException
     {    
         this.file = new File(filename);
         this.reader = new FileReader(file);
         this.scan = new Scanner(reader);
+        this.len = 0;
     }
     public List<Picture> read() throws IOException
     {
-        int len = this.scan.nextInt();
+        this.len = this.scan.nextInt();
         this.data = new ArrayList<Picture>(len);
         for(int i = 0;i < len;i++)
         {
@@ -26,5 +28,9 @@ class Reader
             this.data.add(picture);
         }
         return this.data;
+    }
+    public int size()
+    {
+        return this.len;
     }
 }
