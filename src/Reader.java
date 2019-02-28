@@ -25,7 +25,7 @@ class Reader
         for(int i = 0;i < len;i++)
         {
             String read = this.scan.nextLine();
-            Picture picture = new Picture(read);
+            Picture picture = new Picture(read,i);
             this.data.add(picture);
         }
         return this.data;
