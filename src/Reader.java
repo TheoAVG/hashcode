@@ -13,7 +13,6 @@ class Reader
     int len;
     public Reader(String filename) throws IOException
     {    
-        //this.file = new File(filename);
         this.reader = new FileReader(filename);
         this.scan = new Scanner(reader);
         this.len = 0;
@@ -21,7 +20,7 @@ class Reader
     public List<Picture> read() throws IOException
     {
         this.len = this.scan.nextInt();
-        System.out.println(this.len);
+        this.scan.nextLine();
         this.data = new ArrayList<Picture>(len);
         for(int i = 0;i < len;i++)
         {
