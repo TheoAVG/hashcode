@@ -2,7 +2,7 @@ public class Picture
 {
     char type;
     int len;
-    String tags;
+    String[] tags;
     public Picture(String data)
     {
         String[] p = data.split(" ");
