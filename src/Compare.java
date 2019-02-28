@@ -4,7 +4,7 @@ import static java.lang.Math.min;
 
 public class Compare {
 
-    public int compare(String[] a, String[] b) {
+    static public int compare(String[] a, String[] b) {
         int side_a = 0;
         int common = 0;
         int side_b = 0;
